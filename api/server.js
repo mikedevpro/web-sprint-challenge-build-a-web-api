@@ -1,4 +1,7 @@
 const express = require('express');
+const Project = require('./projects/projects-model')
+const Action = require('./actions/actions-model')
+
 const server = express();
 
 // Configure your server here
