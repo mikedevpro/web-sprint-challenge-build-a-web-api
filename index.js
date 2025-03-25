@@ -12,9 +12,11 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Pull your server into this file and start it!
 */
-const server = require('./api/server.js')
+const server = require('./api/server')
 
-const port = process.env.PORT || 9000;
+const mainPort = 9000
+
+const port = process.env.PORT || mainPort
 
 server.listen(port, () => {
   console.log(`Server listening on port ${port}`)
