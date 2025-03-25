@@ -1,6 +1,6 @@
 // Write your "actions" router here!
 const express = require('express');
-const Action = require('/.actions-model');
+const Action = require('./actions-model');
 const { requireNotes } = require('./actions-middleware');
 const router = express.Router();
 
@@ -33,9 +33,9 @@ router.post('/', (req, res) => {
     .then(resp => {
         res.status(200).json(resp)
     })
-    .catch(error) => {
+    .catch(error => {
         res.status(500).json({ message: 'Server error -- server could not add the action' })
-    }
+    })
 })
 
 router.put('/:id', (req, res) => {
